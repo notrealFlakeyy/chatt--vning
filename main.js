@@ -20,8 +20,6 @@ const db = getDatabase(app);
 const chatRef = ref(db, '/chat');
 
 onChildAdded(chatRef, function (data) {
-    console.log(data.val());
-
     const message = document.createElement('li');
     message.innerText = data.val();
     list.appendChild(message);
