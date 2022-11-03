@@ -7,6 +7,7 @@
 body {
     display: flex;
     height: 100vh;
+    width: 100vw;
     background: #252525;
     justify-content: center;
 }
@@ -36,6 +37,27 @@ input:focus {
 input {
     padding: 8px;
     border-radius: 8px;
-    background: #df6da4;
+    background: #6987b8;
     border: none;
+}
+
+#email,
+#password {
+    width: 50%;
+    margin-bottom: 12px;
+}
+
+.btn {
+    background-color: #1f2a3b;
+    border: none;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100vw;
+    align-items: flex-start;
+    margin-top: 0;
+    top: 0;
 }

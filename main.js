@@ -21,7 +21,7 @@ const chatRef = ref(db, '/chat');
 
 onChildAdded(chatRef, function (data) {
     const message = document.createElement('li');
-    message.innerText = data.val();
+    message.innerText = new Date(data.key).toLocaleString("sv-SE") + " " + data.val();
     list.appendChild(message);
 });
 
@@ -35,7 +35,8 @@ const list = document.querySelector('ul');
 input.addEventListener("keypress", function (event) {
     if (event.key == "Enter") {
 
-        const messageId = Date.now();
+        const messageId = new Date().toUTCString();
+
 
         set(ref(db, 'chat/' + messageId), input.value);
 
